@@ -4,14 +4,14 @@
     android:layout_height="match_parent"
     android:orientation="horizontal">
 
-    <EditText
-        android:id="@+id/edit_message"
-        android:layout_width="0dp"
+    <Button
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:hint="@string/message"
-        android:importantForAutofill="no"
-        android:inputType="textLongMessage" />
+        android:text="@string/send" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/send" />
 
     <Button
         android:layout_width="wrap_content"
@@ -21,6 +21,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="onBackClick"
-        android:text="@string/back" />
+        android:text="@string/send" />
+
+
 </LinearLayout>
