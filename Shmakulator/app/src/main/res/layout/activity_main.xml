@@ -13,18 +13,18 @@
         android:orientation="vertical">
 
         <EditText
-            android:id="@+id/input_box"
+            android:id="@+id/inputBox"
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:ems="10"
             android:gravity="end"
+            android:importantForAutofill="no"
             android:inputType="none"
-            android:textSize="50sp"
             android:text="5+5"
-            android:importantForAutofill="no" />
+            android:textSize="50sp" />
 
         <TextView
-            android:id="@+id/result_box"
+            android:id="@+id/resultBox"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:gravity="end"
@@ -40,7 +40,7 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/butdelet"
+            android:id="@+id/btnDelete"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#FFFFFF"
@@ -61,25 +61,25 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/but7"
+                android:id="@+id/btn7"
                 style="@style/CalcButton"
                 android:text="7" />
 
             <Button
-                android:id="@+id/but8"
+                android:id="@+id/btn8"
                 style="@style/CalcButton"
                 android:text="8" />
 
             <Button
-                android:id="@+id/but9"
+                android:id="@+id/btn9"
                 style="@style/CalcButton"
                 android:text="9" />
 
             <Button
-                android:id="@+id/butadd"
+                android:id="@+id/btnPlus"
                 style="@style/CalcButton"
                 android:text="+"
-                android:textColor="#6FB151"/>
+                android:textColor="#6FB151" />
 
         </LinearLayout>
 
@@ -90,7 +90,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/but4"
+                android:id="@+id/btn4"
                 style="@style/CalcButton"
                 android:text="4" />
 
@@ -100,15 +100,15 @@
                 android:text="5" />
 
             <Button
-                android:id="@+id/but6"
+                android:id="@+id/btn6"
                 style="@style/CalcButton"
                 android:text="6" />
 
             <Button
-                android:id="@+id/butmin"
+                android:id="@+id/btnMinus"
                 style="@style/CalcButton"
                 android:text="-"
-                android:textColor="#6FB151"/>
+                android:textColor="#6FB151" />
 
         </LinearLayout>
 
@@ -119,25 +119,25 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/but1"
+                android:id="@+id/btn1"
                 style="@style/CalcButton"
                 android:text="1" />
 
             <Button
-                android:id="@+id/but2"
+                android:id="@+id/btn2"
                 style="@style/CalcButton"
                 android:text="2" />
 
             <Button
-                android:id="@+id/but3"
+                android:id="@+id/btn3"
                 style="@style/CalcButton"
                 android:text="3" />
 
             <Button
-                android:id="@+id/butmul"
+                android:id="@+id/btnMultiply"
                 style="@style/CalcButton"
                 android:text="*"
-                android:textColor="#6FB151"/>
+                android:textColor="#6FB151" />
 
         </LinearLayout>
 
@@ -148,28 +148,28 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/butclear"
+                android:id="@+id/btnClear"
                 style="@style/CalcButton"
                 android:text="C"
                 android:textColor="#FF6F00" />
 
             <Button
-                android:id="@+id/butzero"
+                android:id="@+id/btnZero"
                 style="@style/CalcButton"
                 android:text="0" />
 
             <Button
-                android:id="@+id/butdiv"
+                android:id="@+id/btnDiv"
                 style="@style/CalcButton"
                 android:text="\u00F7"
                 android:textColor="#6FB151" />
 
             <Button
-                android:id="@+id/butequal"
+                android:id="@+id/btnEqual"
                 style="@style/CalcButton"
+                android:background="#6FB151"
                 android:text="="
-                android:textColor="#FFFFFF"
-                android:outlineSpotShadowColor="#6FB151"/>
+                android:textColor="#FFFFFF" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
