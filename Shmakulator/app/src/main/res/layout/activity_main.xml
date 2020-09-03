@@ -178,8 +178,9 @@
             <Button
                 android:id="@+id/butequal"
                 style="@style/CalcButton"
-                android:text="=" />
-
+                android:text="="
+                android:textColor="#FFFFFF"
+                android:background="#6FB151"/>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
