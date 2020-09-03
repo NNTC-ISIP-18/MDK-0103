@@ -17,16 +17,23 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final MediaPlayer mp = MediaPlayer.create(this, R.raw.click);
+        final MediaPlayer mpClick = MediaPlayer.create(this, R.raw.click);
         ArrayList<View> allButtons = findViewById(R.id.buttonsContainer).getTouchables();
         for (View v : allButtons) {
             Button btn = (Button) v;
             btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    mp.start();
+                    mpClick.start();
                 }
             });
         }
+        final MediaPlayer mpClickDel = MediaPlayer.create(this, R.raw.click_del);
+        findViewById(R.id.butdelet).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mpClickDel.start();
+            }
+        });
     }
 }
