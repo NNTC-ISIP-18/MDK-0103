@@ -43,6 +43,8 @@
             android:id="@+id/butdelet"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:
+            android:background="#FFFFFF"
             android:text="Del"
             android:textSize="16sp" />
     </LinearLayout>
