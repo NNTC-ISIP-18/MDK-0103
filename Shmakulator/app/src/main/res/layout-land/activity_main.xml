@@ -14,7 +14,7 @@
         android:orientation="vertical">
 
         <EditText
-            android:id="@+id/input_box"
+            android:id="@+id/inputBox"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:ems="10"
