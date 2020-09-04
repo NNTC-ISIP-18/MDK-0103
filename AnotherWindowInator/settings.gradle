@@ -1,0 +1,2 @@
+rootProject.name='AnotherWindowInator'
+include ':app'
