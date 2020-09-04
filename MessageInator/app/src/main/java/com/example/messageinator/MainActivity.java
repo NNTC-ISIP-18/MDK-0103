@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void clickBtnMsg(View view) {
-        Toast toast = Toast.makeText(this,"Не жми",Toast.LENGTH_LONG);
+        Toast toast = Toast.makeText(this,"Не жми!!!!!!",Toast.LENGTH_SHORT);
         toast.setGravity(Gravity.TOP, 0,160);
         toast.show();
     }
