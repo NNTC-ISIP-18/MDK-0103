@@ -1,4 +1,4 @@
-package com.example.svetaroflinator;
+package com.nntc.svetaroflinator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
