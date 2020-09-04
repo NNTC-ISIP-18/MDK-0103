@@ -8,13 +8,17 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity {
-    MediaPlayer mpClick;
-    MediaPlayer mpClickAlert;
+import java.math.BigDecimal;
+import java.math.MathContext;
+import java.math.RoundingMode;
+import java.text.NumberFormat;
 
+public class MainActivity extends AppCompatActivity {
+    private MediaPlayer mpClick;
+    private MediaPlayer mpClickAlert;
     private String n1 = "";
     private String n2 = "";
-    Operator operator = Operator.none;
+    private Operator operator = Operator.none;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,61 +61,43 @@ public class MainActivity extends AppCompatActivity {
                     n1 = "";
                     n2 = "";
                     operator = Operator.none;
-                }
-                case R.id.btnPlus: {
-                    operator = Operator.plus;
+                    ((TextView) findViewById(R.id.resultBox)).setText(n1);
                     break;
                 }
-                case R.id.btnMinus: {
-                    operator = Operator.minus;
-                    break;
-                }
-                case R.id.btnMultiply: {
-                    operator = Operator.multiply;
-                    break;
-                }
-                case R.id.btnDiv: {
-                    operator = Operator.divide;
-                    break;
-                }
+                // @formatter:off
+                case R.id.btnPlus:     operator = Operator.plus;     break;
+                case R.id.btnMinus:    operator = Operator.minus;    break;
+                case R.id.btnMultiply: operator = Operator.multiply; break;
+                case R.id.btnDiv:      operator = Operator.divide;   break;
+                // @formatter:on
                 case R.id.btnEqual: {
-                    if (operator == Operator.none) {
+                    if (operator == Operator.none || n1.isEmpty() || n2.isEmpty()) {
                         return;
                     }
-                    double result = 0d;
-                    double num1 = Double.parseDouble(n1);
-                    double num2 = Double.parseDouble(n2);
+                    BigDecimal num1 = new BigDecimal(n1);
+                    BigDecimal num2 = new BigDecimal(n2);
                     switch (operator) {
-                        case plus:
-                            result = num1 + num2;
-                            break;
-                        case minus:
-                            result = num1 - num2;
-                            break;
-                        case multiply:
-                            result = num1 * num2;
-                            break;
+                        // @formatter:off
+                        case plus:     num1 = num1.add(num2); break;
+                        case minus:    num1 = num1.subtract(num2); break;
+                        case multiply: num1 = num1.multiply(num2); break;
+                        // @formatter:on
                         case divide:
-                            if (num2 == 0) {
+                            if (num2.equals(BigDecimal.ZERO)) {
                                 mpClickAlert.seekTo(0);
                                 mpClickAlert.start();
                                 return;
                             }
-                            result = num1 / num2;
+                            num1 = num1.divide(num2, 10, RoundingMode.HALF_UP);
                             break;
                     }
-                    n1 = Double.toString(result);
-                    n2 = "";
-                    operator = Operator.none;
-                    break;
+                    n1 = num1.stripTrailingZeros().toPlainString();
+                    ((TextView) findViewById(R.id.resultBox)).setText(n1);
+                    return;
                 }
             }
         }
-        if (operator == Operator.none) {
-            ((TextView) findViewById(R.id.inputBox)).setText(n1);
-        } else {
-            ((TextView) findViewById(R.id.inputBox)).setText(n2);
-        }
+        ((TextView) findViewById(R.id.inputBox)).setText(operator == Operator.none ? n1 : n2);
     }
 
     enum Operator {
