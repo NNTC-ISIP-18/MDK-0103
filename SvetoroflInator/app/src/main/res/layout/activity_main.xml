@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainBack"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -16,35 +16,33 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-            android:id="@+id/fab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:theme="@style/Theme.MaterialComponents.NoActionBar"
-            android:text="Красный" />
-
-        <Button
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/btnLight1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:backgroundTint="#F44336"
+            app:fabCustomSize="100sp"
             android:onClick="onLight1Click"
-            android:text="Красный" />
+            android:theme="@style/Theme.MaterialComponents.NoActionBar" />
 
-        <Button
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/btnLight2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginVertical="30sp"
+            android:backgroundTint="#4CAF50"
+            app:fabCustomSize="100sp"
             android:onClick="onLight2Click"
-            android:text="Зеленый"
-            tools:ignore="OnClick" />
+            android:theme="@style/Theme.MaterialComponents.NoActionBar" />
 
-        <Button
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/btnLight3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:backgroundTint="#00BCD4"
+            app:fabCustomSize="100sp"
             android:onClick="onLight3Click"
-            android:text="Синий" />
+            android:theme="@style/Theme.MaterialComponents.NoActionBar" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
