@@ -22,8 +22,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#F44336"
             app:fabCustomSize="100sp"
-            android:onClick="onLight1Click"
-            android:theme="@style/Theme.MaterialComponents.NoActionBar" />
+            android:onClick="onLight1Click" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/btnLight2"
@@ -32,17 +31,16 @@
             android:layout_marginVertical="30sp"
             android:backgroundTint="#4CAF50"
             app:fabCustomSize="100sp"
-            android:onClick="onLight2Click"
-            android:theme="@style/Theme.MaterialComponents.NoActionBar" />
+            android:onClick="onLight2Click" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/btnLight3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="30sp"
             android:backgroundTint="#00BCD4"
             app:fabCustomSize="100sp"
-            android:onClick="onLight3Click"
-            android:theme="@style/Theme.MaterialComponents.NoActionBar" />
+            android:onClick="onLight3Click" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
