@@ -10,25 +10,20 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="10sp"
         android:orientation="vertical">
 
-        <EditText
+        <TextView
             android:id="@+id/inputBox"
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:ems="10"
-            android:gravity="end"
-            android:importantForAutofill="no"
-            android:inputType="none"
-            android:text="5+5"
+            android:textAlignment="viewEnd"
             android:textSize="50sp" />
 
         <TextView
             android:id="@+id/resultBox"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:gravity="end"
-            android:text="10"
             android:textSize="35sp" />
     </LinearLayout>
 
@@ -44,6 +39,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#FFFFFF"
+            android:onClick="onKeyboardClick"
             android:text="Del"
             android:textSize="16sp" />
     </LinearLayout>
@@ -63,21 +59,25 @@
             <Button
                 android:id="@+id/btn7"
                 style="@style/CalcButton"
+                android:onClick="onKeyboardClick"
                 android:text="7" />
 
             <Button
                 android:id="@+id/btn8"
                 style="@style/CalcButton"
+                android:onClick="onKeyboardClick"
                 android:text="8" />
 
             <Button
                 android:id="@+id/btn9"
                 style="@style/CalcButton"
+                android:onClick="onKeyboardClick"
                 android:text="9" />
 
             <Button
                 android:id="@+id/btnPlus"
                 style="@style/CalcButton"
+                android:onClick="onKeyboardClick"
                 android:text="+"
                 android:textColor="#6FB151" />
 
@@ -92,21 +92,25 @@
             <Button
                 android:id="@+id/btn4"
                 style="@style/CalcButton"
+                android:onClick="onKeyboardClick"
                 android:text="4" />
 
             <Button
-                android:id="@+id/but5"
+                android:id="@+id/btn5"
                 style="@style/CalcButton"
+                android:onClick="onKeyboardClick"
                 android:text="5" />
 
             <Button
                 android:id="@+id/btn6"
                 style="@style/CalcButton"
+                android:onClick="onKeyboardClick"
                 android:text="6" />
 
             <Button
                 android:id="@+id/btnMinus"
                 style="@style/CalcButton"
+                android:onClick="onKeyboardClick"
                 android:text="-"
                 android:textColor="#6FB151" />
 
@@ -121,21 +125,25 @@
             <Button
                 android:id="@+id/btn1"
                 style="@style/CalcButton"
+                android:onClick="onKeyboardClick"
                 android:text="1" />
 
             <Button
                 android:id="@+id/btn2"
                 style="@style/CalcButton"
+                android:onClick="onKeyboardClick"
                 android:text="2" />
 
             <Button
                 android:id="@+id/btn3"
                 style="@style/CalcButton"
+                android:onClick="onKeyboardClick"
                 android:text="3" />
 
             <Button
                 android:id="@+id/btnMultiply"
                 style="@style/CalcButton"
+                android:onClick="onKeyboardClick"
                 android:text="*"
                 android:textColor="#6FB151" />
 
@@ -150,17 +158,20 @@
             <Button
                 android:id="@+id/btnClear"
                 style="@style/CalcButton"
+                android:onClick="onKeyboardClick"
                 android:text="C"
                 android:textColor="#FF6F00" />
 
             <Button
                 android:id="@+id/btnZero"
                 style="@style/CalcButton"
+                android:onClick="onKeyboardClick"
                 android:text="0" />
 
             <Button
                 android:id="@+id/btnDiv"
                 style="@style/CalcButton"
+                android:onClick="onKeyboardClick"
                 android:text="\u00F7"
                 android:textColor="#6FB151" />
 
@@ -168,6 +179,7 @@
                 android:id="@+id/btnEqual"
                 style="@style/CalcButton"
                 android:background="#6FB151"
+                android:onClick="onKeyboardClick"
                 android:text="="
                 android:textColor="#FFFFFF" />
         </LinearLayout>
