@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickClick(View view) {
-        // Прибовляем и выдаем ответ
+        // Прибавляем и выдаем ответ
         counter += 1;
         ((TextView) findViewById(R.id.textClick)).setText("" + counter);
     }
