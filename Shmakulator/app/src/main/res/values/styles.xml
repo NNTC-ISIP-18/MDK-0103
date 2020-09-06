@@ -6,6 +6,8 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
 
     <style name="CalcButton">
@@ -13,6 +15,8 @@
         <item name="android:layout_height">match_parent</item>
         <item name="android:layout_weight">1</item>
         <item name="android:textSize">10pt</item>
+        <item name="android:textColor">#f8f8f2</item>
+        <item name="android:backgroundTint">#44475a</item>
     </style>
 
 </resources>
