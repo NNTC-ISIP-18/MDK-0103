@@ -92,8 +92,8 @@ public class MainActivity extends AppCompatActivity {
                             break;
                     }
                     n1 = num1.stripTrailingZeros().toPlainString();
+                    n2 = "";
                     ((TextView) findViewById(R.id.resultBox)).setText(n1);
-                    return;
                 }
             }
         }
