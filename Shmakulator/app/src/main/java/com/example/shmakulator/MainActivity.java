@@ -1,10 +1,15 @@
 package com.example.shmakulator;
 
+import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -65,10 +70,18 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 }
                 // @formatter:off
-                case R.id.btnPlus:     operator = Operator.plus;     break;
-                case R.id.btnMinus:    operator = Operator.minus;    break;
-                case R.id.btnMultiply: operator = Operator.multiply; break;
-                case R.id.btnDiv:      operator = Operator.divide;   break;
+                case R.id.btnPlus:
+                    operator = Operator.plus;
+                    break;
+                case R.id.btnMinus:
+                    operator = Operator.minus;
+                    break;
+                case R.id.btnMultiply:
+                    operator = Operator.multiply;
+                    break;
+                case R.id.btnDiv:
+                    operator = Operator.divide;
+                    break;
                 // @formatter:on
                 case R.id.btnEqual: {
                     if (operator == Operator.none || n1.isEmpty() || n2.isEmpty()) {
@@ -78,9 +91,15 @@ public class MainActivity extends AppCompatActivity {
                     BigDecimal num2 = new BigDecimal(n2);
                     switch (operator) {
                         // @formatter:off
-                        case plus:     num1 = num1.add(num2); break;
-                        case minus:    num1 = num1.subtract(num2); break;
-                        case multiply: num1 = num1.multiply(num2); break;
+                        case plus:
+                            num1 = num1.add(num2);
+                            break;
+                        case minus:
+                            num1 = num1.subtract(num2);
+                            break;
+                        case multiply:
+                            num1 = num1.multiply(num2);
+                            break;
                         // @formatter:on
                         case divide:
                             if (num2.equals(BigDecimal.ZERO)) {
@@ -102,5 +121,16 @@ public class MainActivity extends AppCompatActivity {
 
     enum Operator {
         none, plus, minus, multiply, divide
+    }
+
+    public void showToast(View view) {
+        Toast message = Toast.makeText(getApplicationContext(),
+                "Реклама", Toast.LENGTH_LONG);
+        message.setGravity(Gravity.CENTER, 0, 0);
+        LinearLayout toastContainer = (LinearLayout) message.getView();
+        ImageView ImageView = new ImageView(getApplicationContext());
+        ImageView.setImageResource(R.drawable.reclama);
+        toastContainer.addView(ImageView, 1000,1000);
+        message.show();
     }
 }
