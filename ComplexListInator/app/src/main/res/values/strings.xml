@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ComplexListInator</string>
+    <string name="simple_list">Simple list</string>
+    <string name="buttons_list">List with buttons</string>
+    <string name="autocomplete_box">Autocompleting text box</string>
+    <string name="menu">Menu</string>
+    <string name="back">Back</string>
+    <string name="main_screen">Main</string>
+</resources>

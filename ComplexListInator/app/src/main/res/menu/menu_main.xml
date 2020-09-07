@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context="com.nntc.complexlistinator.MainActivity">
+
+    <item
+        android:title="@string/main_screen" />
+    <item
+        android:onClick="onSimpleListClick"
+        android:title="@string/simple_list" />
+    <item
+        android:onClick="onButtonsListClick"
+        android:title="@string/buttons_list" />
+    <item
+        android:onClick="onAutocompleteBoxClick"
+        android:title="@string/autocomplete_box" />
+</menu>
