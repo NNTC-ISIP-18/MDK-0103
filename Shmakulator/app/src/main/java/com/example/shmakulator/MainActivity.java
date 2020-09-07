@@ -10,9 +10,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import java.math.BigDecimal;
 import java.math.MathContext;
 import java.math.RoundingMode;
@@ -37,14 +35,17 @@ public class MainActivity extends AppCompatActivity {
         if (view.getId() == R.id.btnDelete) {
             mpClickAlert.seekTo(0);
             mpClickAlert.start();
+            showToast(view);
         } else {
             mpClick.seekTo(0);
             mpClick.start();
+            showToast(view);
         }
         String label = ((Button) view).getText().toString();
         if (Character.isDigit(label.charAt(0))) {
             try {
                 int number = Integer.parseInt(label);
+                showToast(view);
                 if (operator == Operator.none) {
                     n1 += number;
                 } else {
