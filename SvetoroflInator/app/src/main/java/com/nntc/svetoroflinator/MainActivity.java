@@ -16,14 +16,23 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void onLight1Click(View view) {
-        findViewById(R.id.mainBack).setBackgroundColor(Color.parseColor("#F44336"));
+        findViewById(R.id.mainBack)
+                .setBackgroundColor(
+                        Color.parseColor("#F44336")
+                );
     }
 
     public void onLight2Click(View view) {
-        findViewById(R.id.mainBack).setBackgroundColor(Color.parseColor("#4CAF50"));
+        findViewById(R.id.mainBack)
+                .setBackgroundColor(
+                        Color.parseColor("#4CAF50")
+                );
     }
 
     public void onLight3Click(View view) {
-        findViewById(R.id.mainBack).setBackgroundColor(Color.parseColor("#00BCD4"));
+        findViewById(R.id.mainBack)
+                .setBackgroundColor(
+                        Color.parseColor("#00BCD4")
+                );
     }
 }
