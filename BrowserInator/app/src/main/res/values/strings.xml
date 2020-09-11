@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">BrowserInator</string>
+    <string name="open_browser">Open Browser</string>
+    <string name="browser">Browser</string>
+</resources>
