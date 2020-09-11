@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/mapClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onMapClick"
+            android:text="Карта"
+            tools:layout_editor_absoluteX="135dp"
+            tools:layout_editor_absoluteY="198dp" />
+
+        <Button
+            android:id="@+id/callClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onCallClick"
+            android:text="Звонок"
+            tools:layout_editor_absoluteX="121dp"
+            tools:layout_editor_absoluteY="358dp"
+            android:layout_marginVertical="50sp"/>
+
+        <Button
+            android:id="@+id/webClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onWebClick"
+            android:text="Сайт"
+            tools:layout_editor_absoluteX="127dp"
+            tools:layout_editor_absoluteY="458dp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
