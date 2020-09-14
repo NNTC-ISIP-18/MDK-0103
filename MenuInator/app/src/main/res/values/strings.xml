@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MenuInator</string>
+    <string name="todo">Todo</string>
+    <string name="help">Help</string>
+</resources>
