@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ParrotConvertInator</string>
+    <string name="how_much">How much?</string>
+    <string name="meters">Meters</string>
+    <string name="parrots">Parrots</string>
+    <string name="result"><![CDATA[<Result>]]></string>
+    <string name="invalid">Invalid</string>
+</resources>
