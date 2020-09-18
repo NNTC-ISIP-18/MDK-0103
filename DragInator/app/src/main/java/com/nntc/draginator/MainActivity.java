@@ -19,20 +19,28 @@ public class MainActivity extends Activity {
         setContentView(new MyView(this));
     }
 
+    enum State {
+        fixed,
+        dragging
+    }
+
     static class MyView extends View {
+        State state = State.dragging;
+
         Paint p;
-        // координаты для рисования квадрата
         float x = 100;
         float y = 100;
         int side = 100;
 
+        int springStep = 0;
+        int direction = 1;
+
         int screenHeight;
-        int speed = 3;
+        final double initialSpeed  = 2;
+        double speed = initialSpeed;
 
         Timer timer = new Timer();
 
-        // переменные для перетаскивания
-        boolean drag = false;
         float dragX = 0;
         float dragY = 0;
 
@@ -44,11 +52,17 @@ public class MainActivity extends Activity {
             timer.scheduleAtFixedRate(new TimerTask() {
                 @Override
                 public void run() {
-                    if (y > screenHeight - side) {
+                    if (state == State.dragging) {
+                        return;
+                    }
+                    if (y >= screenHeight - side) {
                         y = screenHeight - side;
+                        // spring
+
+                        return;
                     }
                     y += speed;
-                    speed *= 1.1;
+                    speed *= 1.02;
                     invalidate();
                 }
             }, 100, 5);
@@ -56,43 +70,32 @@ public class MainActivity extends Activity {
 
         protected void onDraw(Canvas canvas) {
             screenHeight = getHeight();
-            // рисуем квадрат
             canvas.drawRect(x, y, x + side, y + side, p);
         }
 
         @Override
         public boolean onTouchEvent(MotionEvent event) {
-            // координаты Touch-события
             float evX = event.getX();
             float evY = event.getY();
 
             switch (event.getAction()) {
-                // касание началось
                 case MotionEvent.ACTION_DOWN:
-                    // если касание было начато в пределах квадрата
                     if (evX >= x && evX <= x + side && evY >= y && evY <= y + side) {
-                        // включаем режим перетаскивания
-                        drag = true;
-                        // разница между левым верхним углом квадрата и точкой касания
+                        state = State.dragging;
                         dragX = evX - x;
                         dragY = evY - y;
                     }
                     break;
-                // тащим
                 case MotionEvent.ACTION_MOVE:
-                    // если режим перетаскивания включен
-                    if (drag) {
-                        // определеяем новые координаты для рисования
+                    if (state == State.dragging) {
                         x = evX - dragX;
                         y = evY - dragY;
-                        // перерисовываем экран
                         invalidate();
                     }
                     break;
-                // касание завершено
                 case MotionEvent.ACTION_UP:
-                    // выключаем режим перетаскивания
-                    drag = false;
+                    state = State.fixed;
+                    speed = initialSpeed;
                     break;
             }
             return true;
