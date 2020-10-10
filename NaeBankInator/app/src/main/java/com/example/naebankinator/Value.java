@@ -18,7 +18,7 @@ public class Value extends AppCompatActivity {
         final String[] catNames = new String[] {
                 "Рыжик", "Барсик", "Мурзик", "Мурка", "Васька",
                 "Томасина", "Кристина", "Пушок", "Дымка", "Кузя",
-                "Китти", "Масяня", "Симба"
+                "Китти", "Масяня", "Симба","ыы","кыр","ывк","рпа","рол"
         };
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
